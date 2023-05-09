@@ -18,9 +18,24 @@ for (let i = 0; i < product.length; i++) {
 }
 console.log(``);
 for (let j = 0; j < product.length; j++) {
-  if (product[j].products.indexOf == "M&Ms") {
+  if (product[j].products.includes("M&Ms")){
     console.log(
       "Candies that has the name M&M to their name are " + product[j].products
     );
   }
+}
+console.log(``)
+console.log("Do we carry swedish fish?")
+
+let haveSwedishFish = false;
+for (let k = 0; k < product.length; k++) {
+    if (product[k].products == "Swedish Fish"){
+      haveSwedishFish = true;
+    }
+  }
+
+if (haveSwedishFish) {
+    console.log(`yes`);
+} else {
+    console.log(`no`);
 }
