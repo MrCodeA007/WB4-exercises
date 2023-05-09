@@ -58,7 +58,7 @@ for (let k= 0; k<courses.length; k++) {
 console.log(``)
 for (let l = 0; l<courses.length; l++) {
     if (courses[l].Location == "Classroom 1"){
-        console.log("The classes that meet in Classroom 1 are " + courses[l].Title)
+        console.log("The classes that meet in Classroom 1 are " + courses[l].CourseId)
     }
 }
 
