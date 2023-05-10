@@ -64,17 +64,35 @@ let vehicles = [
     capacity: 5
     }
    ];
-   console.log(`Red vehicles:`)
-   for (let i = 0;i < vehicles.length; i++) {
-    if(vehicles[i].color == "Red"){
-        console.log(vehicles[i]);
-    }
-   }
 
-   /*console.log(`Red vehicles:`)
-   for (let i = 0;i < vehicles.length; i++) {
-    if(vehicles[i].color == "Red"){
-        console.log(vehicles[i]);
-    }
-   }*/ //finish after class
+   console.log('Red Vehicles:');
+for (let i = 0; i < vehicles.length; i++) {
+  if (vehicles[i].color == 'Red') {
+    console.log(vehicles[i]);
+  }
+}
+console.log(``)
+console.log('Expired Registrations');
+const today = new Date();
+for (let i = 0; i < vehicles.length; i++) {
+  if (vehicles[i].registrationExpires < today) {
+    console.log(vehicles[i].licenseNo);
+  }
+}
+console.log(``)
+console.log('At least 6 people');
+for (let i = 0; i < vehicles.length; i++) {
+  if (vehicles[i].capacity >= 6) {
+    console.log(vehicles[i].licenseNo, vehicles[i].type);
+  }
+}
+console.log(``)
+console.log('License ends with 222');
+for (let i = 0; i < vehicles.length; i++) {
+  if (vehicles[i].licenseNo.endsWith('222')) {
+    console.log(vehicles[i].licenseNo);
+  }
+}
+
+   
    
