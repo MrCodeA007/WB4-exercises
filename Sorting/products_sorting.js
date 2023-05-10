@@ -11,10 +11,25 @@ let product = [
     { products: "tootsie roll", prices: 0.5 },
   ];
 
-  product.sort();
+  product.sort(function (a, b){
+    if (a.products < b.products) return -1;
+    else if (a.products == b.products) return 0;
+    else return 1;
+})
 
-let numproducts = product.length;
-for(let i = 0;i <numproducts; i++) {
-   if (product[i].products)
+let productName = product.length;
+for (let i = 0;i<productName;i++) {
+    console.log(product[i].products);
 }
-  //work on
+  console.log(`---------------------------------------`)
+
+  product.sort(function (a, b){
+    if (a.prices > b.prices) return -1;
+    else if (a.prices== b.prices) return 0;
+    else return 1;
+})
+
+productName = product.length;
+for (let i = 0;i<productName;i++) {
+    console.log(product[i].prices.toFixed(2));
+}
