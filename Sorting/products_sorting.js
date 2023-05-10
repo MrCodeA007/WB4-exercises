@@ -17,4 +17,4 @@ let numproducts = product.length;
 for(let i = 0;i <numproducts; i++) {
    if (product[i].products)
 }
-  
+  //work on

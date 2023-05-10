@@ -24,5 +24,5 @@ let academyMembers = [
    ];
 
    for (let i =0; i<academyMembers.length; i++) {
-    
-   }
+
+   } //work on

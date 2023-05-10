@@ -36,6 +36,13 @@ let courses = [
     }
 ];
 
-courses.sort(function(a,b){
-    if (a.cours)
+courses.sort(function (a, b){
+    if (a.Title < b.Title) return -1;
+    else if (a.Title == b.Title) return 0;
+    else return 1;
 })
+
+let numCourses = courses.length;
+for (let i = 0;i<numCourses;i++) {
+    console.log(courses[i].Title);
+}
