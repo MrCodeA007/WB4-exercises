@@ -12,6 +12,7 @@ let product = [
   ];
 
   product.sort(function (a, b){
+    
     if (a.products < b.products) return -1;
     else if (a.products == b.products) return 0;
     else return 1;
@@ -20,9 +21,30 @@ let product = [
 let productName = product.length;
 for (let i = 0;i<productName;i++) {
     console.log(product[i].products);
+
+    //fix upper and lower case issue
+
+    /*another way to do it
+
+function compareProducts(a,b) {
+    if(a.products < b.products ){
+        return 1;
+    }
+        if( b.products < a.product) {
+            return -1;
+        }
+    return 0;
+    }
+
+    products.sort(compareProducts);
+
+    for (let i = 0;i <products.length;i++) {
+        console.log(products[i])
+    } check example after class */
+
 }
   console.log(`---------------------------------------`)
-
+//compare product by decending price
   product.sort(function (a, b){
     if (a.prices > b.prices) return -1;
     else if (a.prices== b.prices) return 0;
@@ -33,3 +55,4 @@ productName = product.length;
 for (let i = 0;i<productName;i++) {
     console.log(product[i].prices.toFixed(2));
 }
+

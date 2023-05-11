@@ -37,9 +37,9 @@ let courses = [
 ];
 
 courses.sort(function (a, b){
-    if (a.Title < b.Title) return -1;
-    else if (a.Title == b.Title) return 0;
-    else return 1;
+    if (a.Title < b.Title) return -1; //In order
+    else if (a.Title == b.Title) return 0; //Same
+    else return 1; //Out of Order
 })
 
 let numCourses = courses.length;
